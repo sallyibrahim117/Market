@@ -1,0 +1,8 @@
+.hover-img{
+display: none;
+}
+.image-wrapper:hover .hover-img{
+  display: block !important;
+   opacity: 0.4 !important;
+   transition: opacity 0.3s ease;
+}

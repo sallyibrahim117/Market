@@ -1,0 +1,66 @@
+
+  <div class="card p-4 border-end border rounded-0 ">
+    <div class="d-flex justify-content-between ">
+      <a class="text-capitalize text-secondary">{{laptopAndTablets.title}}</a>
+
+       <a  class="d-flex gap-3 text-secondary">
+        <i class="pi pi-sliders-h"></i>
+        <i class="pi pi-heart"></i>
+      </a>
+
+    </div>
+    <div class="w-100 justify-content-center d-flex">
+      <div class="text-center mt-4 w-50">
+        <small class="text-capitalize text-danger">hurry up! offer ends in:</small>
+        <div class="row mt-3">
+  <div class="col-4">
+    <div class="d-flex flex-column align-items-center gap-1">
+
+      <div class="border bg-secondary-subtle d-flex align-items-center justify-content-center fw-medium" style="width: 40px;height: 40px;">
+        00
+      </div>
+      <span class="text-uppercase time fw-medium">hours</span>
+    </div>
+
+  </div>
+ :
+
+ <div class="col-3">
+  <div class="d-flex flex-column align-items-center gap-1">
+
+    <div class="border bg-secondary-subtle d-flex align-items-center justify-content-center fw-medium" style="width: 40px;height: 40px;">
+      00
+    </div>
+    <span class="text-uppercase time fw-medium">mins</span>
+  </div>
+
+</div>
+:
+<div class="col-4">
+  <div class="d-flex flex-column align-items-center gap-1">
+
+    <div class="border bg-secondary-subtle d-flex align-items-center justify-content-center fw-medium" style="width: 40px;height: 40px;">
+      00
+    </div>
+    <span class="text-uppercase time fw-medium">secs</span>
+  </div>
+
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <img [src]="laptopAndTablets.image" class="w-100" alt="">
+    </div>
+
+    <a class="text-capitalize link fw-medium mt-4 w-75">{{laptopAndTablets.desc}}</a>
+  <div class="d-flex justify-content-between align-items-center mt-1">
+    <span class="fs-5 fw-medium">${{laptopAndTablets.price}}</span>
+    <a class="rounded-circle border-0 bg-secondary-subtle cart"><i class="pi
+      pi-shopping-cart text-secondary d-flex align-items-center justify-content-center h-100"></i></a>
+  </div>
+  </div>
+
+

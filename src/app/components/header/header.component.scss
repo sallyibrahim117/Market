@@ -1,0 +1,44 @@
+.topHeader{
+
+  .link{
+    font-size: 11px;
+    color: black;
+    &:hover{
+
+      color:#5677fc !important;
+    }
+  }
+  .icon{
+    font-size: 9px;
+    color: black !important;
+    &:hover{
+
+      color:#5677fc !important;
+    }
+  }
+}
+.inp{
+  font-size: 13px;
+}
+.badge{
+  width: 10px;
+  height: 10px;
+  span{
+    font-size: 9px;
+  }
+}
+@media (max-width: 767px) {
+  .topHeader{
+    display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .logo ,.iconList{
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .logo ,.iconList{
+    display: none !important;
+  }
+}

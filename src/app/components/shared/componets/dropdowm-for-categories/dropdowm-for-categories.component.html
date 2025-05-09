@@ -1,0 +1,60 @@
+<!-- <div class="dropdown p-1">
+
+  <button class="btn btn-outline-secondary dropdown-toggle rounded-0 text-capitalize" type="button" data-bs-toggle="dropdown"
+   aria-expanded="false">{{page.label}}</button>
+<ul class="dropdown-menu text-center p-0 m-0 rounded mt-1 " aria-labelledby="navbarDarkDropdownMenuLink ">
+              <li class="justify-content-center list p-0" >
+                <a class="dropdown-item text-capitalize fw-light  m-0 text-center mx-auto" *ngFor="let item of page.list"
+                [routerLink]="item.link">
+                 {{item.label}}
+                </a>
+
+              </li>
+
+            </ul>
+</div> -->
+
+
+
+
+<div class="p-1">
+
+  <select class="form-select  rounded-0" aria-label="Default select example ">
+    <option selected class="text-capitalize ">{{page.label}}</option>
+
+
+    <option class="text-capitalize" *ngFor="let item of page.list" [value]="item.label">{{item.label}}</option>
+
+
+
+  </select>
+</div>
+
+
+
+
+<!-- <div class="dropdown">
+
+  <a class="nav-link dropdown-toggle"  id="navbarDarkDropdownMenuLink" role="button"
+  data-bs-toggle="dropdown"
+  aria-expanded="false" >
+  {{page.label}}
+  </a>
+
+
+    <ul class="dropdown-menu text-center" aria-labelledby="navbarDarkDropdownMenuLink bg-white p-0 ">
+              <li class="justify-content-center py-1" >
+                <a class="dropdown-item text-capitalize fw-light  m-0 text-center mx-auto"
+                 *ngFor="let item of page.list"
+                 [routerLink]="item.link">{{item.label}}</a></li>
+
+            </ul>
+</div> -->
+
+
+
+
+
+
+
+

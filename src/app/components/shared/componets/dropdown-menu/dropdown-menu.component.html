@@ -1,0 +1,21 @@
+<div class="dropdown">
+
+  <a class="nav-link dropdown-toggle"  id="navbarDarkDropdownMenuLink" role="button"
+  data-bs-toggle="dropdown"
+  aria-expanded="false" >
+  {{page.label}}
+  </a>
+
+
+    <ul class="dropdown-menu text-center" aria-labelledby="navbarDarkDropdownMenuLink bg-white p-0 ">
+              <li class="justify-content-center py-1" >
+                <a class="dropdown-item text-capitalize fw-light  m-0 text-center mx-auto"
+                 *ngFor="let item of page.list"
+                 [routerLink]="item.link">{{item.label}}</a></li>
+
+            </ul>
+</div>
+
+
+
+

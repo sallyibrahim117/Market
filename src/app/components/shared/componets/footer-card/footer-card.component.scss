@@ -1,0 +1,15 @@
+.send-input{
+
+  height: 50px;
+
+  }
+  .social-list li {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .social-list li:hover {
+    color: #0d6efd; /* Bootstrap blue or your own brand color */
+  }

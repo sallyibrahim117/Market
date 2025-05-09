@@ -1,0 +1,16 @@
+<ul class="navbar-nav gap-3">
+  <li *ngIf="!navItem.list" class="me-3">
+    <a class="nav-link m-0 text-white text-capitalize"
+    [routerLink]="navItem.link" routerLinkActive="active">{{navItem.label}}</a>
+  </li>
+
+ <ng-container *ngIf="navItem.list">
+   <app-dropdown-menu [page]="navItem"></app-dropdown-menu>
+ </ng-container>
+
+
+
+</ul>
+
+
+

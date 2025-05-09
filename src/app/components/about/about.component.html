@@ -1,0 +1,64 @@
+<app-landscape-img [title]="myTitle"></app-landscape-img>
+<app-vision></app-vision>
+
+<div class="happy-custommer  mt-5 py-5">
+<div class="container">
+  <div class="text-center ">
+
+    <span class=" text-primary fs-1">,,</span>
+    <h2 class="text-capitalize fw-light titleContent">happy custommers</h2>
+    <div class="w-100 justify-content-center d-flex">
+
+      <p class="w-75 fw-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliquim ad minim veniam, quis nostrud
+
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+        <p-carousel
+            [value]="customer()"
+            [numVisible]="1"
+            [numScroll]="1"
+            [circular]="false"
+            [autoplayInterval]="3000"
+            [responsiveOptions]="responsiveOptions">
+                <ng-template let-product pTemplate="item">
+
+    <div class="row ">
+                  <div class="col-md-4 col-12" *ngFor=" let i of customer()">
+
+                    <app-happy-customer [data]="i" ></app-happy-customer>
+
+                  </div>
+                  </div>
+                </ng-template>
+        </p-carousel>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+<div style="background: black;">
+  <div class="container p-4">
+
+    <app-footer-card></app-footer-card>
+  </div>
+
+</div>
+
+
+

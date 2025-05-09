@@ -1,0 +1,20 @@
+<app-landscape-img [title]="myTitle"></app-landscape-img>
+<div class="container mt-5">
+  <div class="row gy-3">
+    <div class="col-lg-3 col-md-6 col-12"  *ngFor="let item of ourTeam()">
+
+
+        <app-team-card [card]="item"></app-team-card>
+
+
+</div>
+</div>
+</div>
+
+<div style="background: black;">
+  <div class="container p-4">
+
+    <app-footer-card></app-footer-card>
+  </div>
+
+</div>

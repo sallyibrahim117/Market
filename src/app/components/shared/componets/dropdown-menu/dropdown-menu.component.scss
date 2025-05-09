@@ -1,0 +1,24 @@
+.nav-link{
+  color: white !important;
+
+}
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu{
+  margin-top: 15px;
+  margin-left: -25px;
+  border: 0px;
+  .dropdown-item{
+    color: black;
+    text-align: center;
+    font-size: 13px;
+    &:hover{
+      background-color: transparent;
+      border-bottom: 1px solid #5677fc;
+      width: fit-content;
+
+    }
+  }
+}

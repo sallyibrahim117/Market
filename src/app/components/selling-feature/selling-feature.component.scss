@@ -1,0 +1,14 @@
+
+.content{
+  color: black;
+a{
+  color: black;
+  &:hover{
+    color: #0d6efd;
+  }
+}
+}
+.del{
+  color: #ddd;
+  text-decoration: line-through;
+}

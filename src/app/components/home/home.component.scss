@@ -1,0 +1,171 @@
+.link{
+  font-size: 11px;
+
+    border-color: #5677fc !important;
+
+}
+
+.list a {
+  transition: border-bottom 0.3s;
+ color: #212529;
+}
+
+.list a:hover {
+  border-bottom: 1px solid #5677fc;
+  color: #0d6efd;
+}
+.man-sec{
+height: 70vh;
+background-image: url("/assets/imgs/man.jpg");
+background-attachment: fixed;
+transition: all ease-in-out;
+.card1{
+  top: 1px;
+  right: 75px;
+  width: 45%;
+  .link{
+    color: black;
+    font-size: 15px;
+  }
+  a:hover{
+    color: #0d6efd !important;
+  }
+  a{
+    font-size: 13px;
+
+  }
+  .cart{
+    width: 40px;
+    height: 40px;
+  }
+}
+}
+.allPhones {
+  background-color: #eee;
+}
+.allPhones ,.cellPhone{
+
+  .nav-item{
+    .nav-link{
+      color: black;
+      margin: 0px;
+      &:hover{
+        border-bottom: 3px solid #0d6efd;
+        color:#5677fc ;
+        border-radius: 0px;
+
+            }
+
+    }
+
+
+    color: black;
+
+
+  .nav-link.active{
+    background: transparent;
+    border-bottom: 3px solid #0d6efd;
+    border-radius: 0px;
+
+    color:#5677fc ;
+
+  }
+
+}
+.title{
+  border-bottom: 2px solid blue;
+  width: fit-content;
+  padding-bottom: 10px;
+}
+}
+.discount{
+  background-image: url('/assets/imgs/bg.jpg');
+  background-position: center;
+background-repeat: no-repeat;
+  height: 300px;
+
+}
+.footer{
+  background-color: black;
+  .footerCrd{
+    background-color: #222325;
+    border-color: #222325;
+    .para{
+      font-size: 11px;
+    }
+    .footLink{
+      &:hover{
+        border-bottom: 3px solid #0d6efd;
+        color:#5677fc ;
+        border-radius: 0px;
+
+            }
+    }
+  }
+
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .man-sec{
+    background-position: center;
+    padding: 20px !important;
+  }
+  .card1{
+    width: 550px !important;
+    top: 0px !important;
+    right: 0px !important;
+    left: 70px;
+  }
+  .myPhones{
+    margin-top: 25px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .discount{
+    background-position: left;
+    height: 500px;
+    width: 90%;
+    margin-left: 30px;
+  }
+  .usrFooter
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 20% !important;
+    }
+  }
+  .cardContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 767.98px) {
+  .man-sec .card1{
+    width: 80%;
+    left: 56px;
+    top: 0;
+    right: 0;
+  }
+  .myPhones{
+    margin-top: 25px;
+  }
+  .usrFooter
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 20% !important;
+    }
+  }
+  .discount{
+    background-position: left;
+  }
+  .releasedSec{
+    display: none;
+  }
+}

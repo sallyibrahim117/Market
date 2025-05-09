@@ -1,0 +1,22 @@
+
+<div class="card p-3 border-end border-0 rounded-0 h-100">
+  <div class="d-flex justify-content-between ">
+    <a class="text-capitalize text-secondary">{{musicAndVideo.title}}</a>
+
+     <a  class="d-flex gap-3 text-secondary">
+      <i class="pi pi-sliders-h"></i>
+      <i class="pi pi-heart"></i>
+    </a>
+
+  </div>
+  <div class="mt-4">
+    <img [src]="musicAndVideo.image" class="w-100" alt="">
+  </div>
+
+  <a class="text-capitalize link fw-medium mt-5 w-75">{{musicAndVideo.desc}}</a>
+<div class="d-flex justify-content-between align-items-center mt-1">
+  <span class="fs-5 fw-medium">${{musicAndVideo.price}}</span>
+  <a class="rounded-circle border-0 bg-secondary-subtle cart"><i class="pi
+    pi-shopping-cart text-secondary d-flex align-items-center justify-content-center h-100"></i></a>
+</div>
+</div>

@@ -1,0 +1,14 @@
+.title{
+  border-bottom: 2px solid blue;
+  width: fit-content;
+  padding-bottom: 10px;
+}
+.content{
+  color: black;
+a{
+  color: black;
+  &:hover{
+    color: #0d6efd;
+  }
+}
+}

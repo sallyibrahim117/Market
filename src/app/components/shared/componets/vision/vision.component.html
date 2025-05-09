@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 col-12" *ngFor="let item of array()">
+      <div>
+        <div>
+          <img [src]="item.img" class="w-100" alt="">
+        </div>
+        <div class="text-center mt-3">
+          <h4 class="text-capitalize fw-light "> {{item.text}}</h4>
+          <p class="text-secondary" style="    font-size: 13px;">{{item.desc}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="topHeader mt-2">
+  <div class="container">
+
+    <div class="d-flex justify-content-between gap-2 flex-wrap">
+      <div class="">
+       <ul class="d-flex gap-3">
+        <li *ngFor="let item of links"><a class="text-uppercase link fw-medium ">{{item.link}}</a></li>
+       </ul>
+      </div>
+      <div class="">
+        <ul class="d-flex align-items-end justify-content-center h-100 gap-4">
+          <li class="d-flex gap-3 " *ngFor="let item of links2"><a class="icon"><i [class]="item.icon"></i>
+
+          </a>
+        <a class="link fw-medium text-uppercase">{{item.link}}</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr class="mb-0">
+</div>
+<div class="container py-4">
+  <div class="row align-items-center ">
+    <div class="col-3">
+
+      <div class="w-75  logo">
+        <img class="w-100" src="/assets/imgs/logo.png"alt="">
+      </div>
+    </div>
+    <div class="col-md-7 col-12 ">
+      <div >
+
+        <div class="input-group border rounded-0 ">
+
+
+
+  <app-dropdowm-for-categories [page]="pageofCat[0]"></app-dropdowm-for-categories>
+
+
+                <input type="text" class="form-control border-0 inp" placeholder="Search for product" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-primary rounded-0 bg-primary" type="button" id="button-addon2"><i class="pi pi-search text-white"></i></button>
+              </div>
+      </div>
+
+    </div>
+    <div class="col-2">
+      <ul class="d-flex gap-4 justify-content-center iconList">
+        <li><a ><i class="pi pi-sliders-h fs-4 text-dark-emphasis "></i></a></li>
+        <li><a ><i class="pi pi-heart fs-4 text-dark-emphasis"></i></a></li>
+        <li><a  class="position-relative"><i class="pi pi-shopping-cart fs-4 text-dark-emphasis"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-primary border border-light rounded-circle d-flex justify-content-center align-items-center badge">
+            <span class=" text-white">0</span>
+          </span>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</div>

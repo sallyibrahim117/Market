@@ -1,0 +1,516 @@
+<app-slider></app-slider>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-12" *ngFor="let item of arrOfImgs">
+      <div class="py-5 position-relative">
+
+        <div>
+          <img [src]="item.im" class="w-100" alt="img1">
+        </div>
+        <div class="position-absolute p-4 w-50" style="top:45px;">
+          <h5 class="text-capitalize m-0 fw-light">{{item.text}}</h5>
+          <a href="#" class="text-capitalize link border-bottom ">shop now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--start category section -->
+<div class="container">
+  <div class="row gy-5">
+    <div class="col-md-3">
+      <div class="border p-4 h-100">
+        <h6 class="text-capitalize">categories</h6>
+        <ul class="mt-4 list position-relative" >
+          <!-- <li class="py-1" *ngFor="let item of cateogries">
+            <a class="text-capitalize" (click)="changeCategory(item.id)"><small>{{item.name}}</small> </a>
+          </li> -->
+          <li class="py-1" *ngFor="let item of category">
+            <a class="text-capitalize" (click)="loadProductsByCategory(item)"><small>{{item}}</small> </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-9">
+<div class="row gy-5">
+  <div class="col-md-4 col-sm-6 col-12 " *ngFor="let pro of products">
+    <app-product-card [product]="pro"></app-product-card>
+  </div>
+
+</div>
+    </div>
+  </div>
+</div>
+<!--end category section -->
+<!--start man section -->
+<div class="mt-5 position-relative man-sec">
+  <!-- <img src="/assets/imgs/man.jpg" class="w-100" alt=""> -->
+  <div class="position-absolute  card1 d-flex align-items-center h-100">
+    <div class="py-5 px-2 rounded-0  bg-white ">
+
+
+      <a  class="d-flex gap-3 text-secondary justify-content-end px-4 py-2">
+        <i class="pi pi-sliders-h"></i>
+        <i class="pi pi-heart"></i>
+      </a>
+      <div>
+        <div class="row gap-4">
+    <div class="col-9">
+    <div class="row align-items-center">
+    <div class="col-5">
+      <div>
+        <img src="/assets/imgs/whitehead.jpg" class="w-100" alt="">
+      </div>
+    </div>
+    <div class="col-7">
+      <div>
+        <div>
+
+          <a class="text-capitalize text-secondary">gadgets</a>,
+          <a class="text-capitalize text-secondary">
+          headphones</a>
+
+        </div>
+      <p class=" m-0">
+        <a  class="text-capitalize link  fw-medium mt-1">
+          apple in-Ear headphones with remote and Mic
+          </a>
+      </p>
+      <span class="fs-5 fw-medium text-success">$65</span>
+      </div>
+    </div>
+    </div>
+    </div>
+         <div class="col-2 d-flex align-items-end justify-content-end">
+
+    <div class="rounded-circle border-0 bg-secondary-subtle cart">
+
+    <a ><i class="pi
+      pi-shopping-cart text-secondary d-flex align-items-center justify-content-center h-100"></i></a>
+    </div>
+           </div>
+         </div>
+        </div>
+
+      </div>
+
+  </div>
+</div>
+<!--end man section -->
+<!-- start taps and navs section smartphones , android -->
+ <section class="allPhones py-5">
+
+   <div class="container">
+    <ul class="nav nav-pills " id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active text-capitalize "
+          id="pills-all-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-all"
+          type="button"
+          role="tab"
+          aria-controls="pills-all"
+          aria-selected="true"
+        >
+          All
+        </button>
+      </li>
+      <li class="nav-item ms-2" role="presentation">
+        <button
+          class="nav-link "
+          id="pills-smartphone-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-smartphone"
+          type="button"
+          role="tab"
+          aria-controls="pills-smartphone"
+          aria-selected="false"
+        >
+          Smartphone
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link  text-capitalize"
+          id="pills-android-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-android"
+          type="button"
+          role="tab"
+          aria-controls="pills-android"
+          aria-selected="false"
+        >
+          android
+        </button>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link  text-capitalize"
+            id="pills-iphone-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-iphone"
+            type="button"
+            role="tab"
+            aria-controls="pills-iphone"
+            aria-selected="false"
+          >
+            iphone
+          </button>
+      </li>
+    </ul >
+
+     <hr class="mt-0 m-0">
+     <div class="tab-content mt-4" id="pills-tabContent">
+        <!-- start all section -->
+     <div
+     class="tab-pane fade show active text-white  mt-4"
+     id="pills-all"
+     role="tabpanel"
+     aria-labelledby="pills-all-tab"
+   >
+   <div class="row gy-2">
+
+     <div class="col-md-5 col-12">
+
+     <!-- <app-product-card [product]="android"></app-product-card> -->
+     </div>
+     <div class="col-md-7 col-12">
+      <div class="row gy-2">
+        <div class="col-md-6 col-12" *ngFor="let i of allPhones">
+  <app-android-phone [androidPhone]="i"></app-android-phone>
+        </div>
+      </div>
+     </div>
+   </div>
+
+  </div>
+     <!-- end all section -->
+        <!-- start smart-phone section -->
+        <div
+        class="tab-pane fade show  text-white  mt-4"
+        id="pills-smartphone"
+        role="tabpanel"
+        aria-labelledby="pills-smartphone-tab"
+      >
+      <div class="row gy-2">
+
+        <div class="col-md-5 col-12">
+
+        <!-- <app-product-card [product]="android"></app-product-card> -->
+        </div>
+        <div class="col-md-7 col-12">
+         <div class="row gy-2">
+           <div class="col-md-6 col-12" *ngFor="let i of allPhones">
+     <app-android-phone [androidPhone]="i"></app-android-phone>
+           </div>
+         </div>
+        </div>
+      </div>
+
+     </div>
+        <!-- end smart-phone section -->
+         <!-- start android-section -->
+         <div
+         class="tab-pane fade show  text-white  mt-4"
+         id="pills-android"
+         role="tabpanel"
+         aria-labelledby="pills-android-tab"
+       >
+       <div class="row gy-2">
+
+         <div class="col-md-5 ">
+
+         <!-- <app-product-card [product]="android"></app-product-card> -->
+         </div>
+         <div class="col-md-4">
+<app-android-phone [androidPhone]="allPhones[0]"></app-android-phone>
+         </div>
+         </div>
+         </div>
+         <!-- end android-section -->
+          <!-- start iphone section -->
+          <div
+          class="tab-pane fade show  text-white  mt-4"
+          id="pills-iphone"
+          role="tabpanel"
+          aria-labelledby="pills-iphone-tab"
+        >
+        <div class="row gy-2">
+
+          <div class="col-md-4 col-12">
+
+
+  <app-android-phone [androidPhone]="allPhones[1]"></app-android-phone>
+  </div>
+  <div class="col-md-4 col-12">
+  <app-android-phone [androidPhone]="allPhones[2]"></app-android-phone>
+  </div>
+  <div class="col-md-4 col-12">
+  <app-android-phone [androidPhone]="allPhones[3]"></app-android-phone>
+</div>
+          </div>
+          </div>
+
+
+          <!-- end iphone section -->
+     </div>
+
+     <!-- start music and movies -->
+<div class="py-5">
+  <div class="py-3">
+
+    <h5 class="title" >Movies, Music & Video Games</h5>
+    <hr class="text-secondary" style="margin-top: -9px;">
+  </div>
+  <div class="row gy-2">
+    <div class="col-md-4 col-12" >
+<app-android-phone [androidPhone]="allmusic()[0]"></app-android-phone> <br>
+<app-android-phone [androidPhone]="allmusic()[1]"></app-android-phone>
+    </div>
+    <div class="col-md-4 col-12" >
+      <app-music-video [musicAndVideo]="musicAndVideo()"></app-music-video>
+</div>
+<div class="col-md-4 col-12" >
+  <app-android-phone [androidPhone]="allmusic()[2]"></app-android-phone> <br>
+  <app-android-phone [androidPhone]="allmusic()[3]"></app-android-phone>
+      </div>
+  </div>
+</div>
+
+<!-- end music and movies -->
+   </div>
+ </section>
+<!-- end taps and navs section smartphones , android -->
+<!-- start phone and tablets -->
+ <section class="py-5">
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-md-4 col-12">
+        <app-laptops-tablets [laptopAndTablets]="laptopAndTablets()"></app-laptops-tablets>
+      </div>
+      <div class="col-md-8 col-12">
+
+
+        <section class="myPhones ">
+
+          <div class="container cellPhone">
+           <ul class="nav nav-pills " id="pills-tab" role="tablist">
+             <li class="nav-item" role="presentation">
+               <button
+                 class="nav-link active text-capitalize "
+                 id="pills-cellPhones-tab"
+                 data-bs-toggle="pill"
+                 data-bs-target="#pills-cellPhones"
+                 type="button"
+                 role="tab"
+                 aria-controls="pills-cellPhones"
+                 aria-selected="true"
+               >
+                 cell phones
+               </button>
+             </li>
+             <li class="nav-item ms-2" role="presentation">
+               <button
+                 class="nav-link "
+                 id="pills-gadgets-tab"
+                 data-bs-toggle="pill"
+                 data-bs-target="#pills-gadgets"
+                 type="button"
+                 role="tab"
+                 aria-controls="pills-gadgets"
+                 aria-selected="false"
+               >
+                 gadgets
+               </button>
+             </li>
+             <li class="nav-item" role="presentation">
+               <button
+                 class="nav-link  text-capitalize"
+                 id="pills-laptopsTablets-tab"
+                 data-bs-toggle="pill"
+                 data-bs-target="#pills-laptopsTablets"
+                 type="button"
+                 role="tab"
+                 aria-controls="pills-laptopsTablets"
+                 aria-selected="false"
+               >
+                 laptops & tablets
+               </button>
+
+           </ul >
+
+            <hr class="mt-0 m-0">
+            <div class="tab-content mt-4" id="pills-tabContent">
+               <!-- start cell phone section -->
+            <div
+            class="tab-pane fade show active text-white  mt-5"
+            id="pills-cellPhones"
+            role="tabpanel"
+            aria-labelledby="pills-cellPhones-tab"
+          >
+          <div class="row gy-5 ">
+<div class="col-md-4 col-sm-6 col-12"  *ngFor="let i of products">
+
+ <app-product-card [product]="i"></app-product-card>
+
+ </div>
+          </div>
+
+         </div>
+            <!-- end cell phone section -->
+               <!-- start gadgets section -->
+               <div
+               class="tab-pane fade show  text-white  mt-5"
+               id="pills-gadgets"
+               role="tabpanel"
+               aria-labelledby="pills-gadgets-tab"
+             >
+             <div class="row gy-4">
+              <div class="col-md-4 col-sm-6 col-12"  *ngFor="let i of allPhones">
+
+                <app-product-card [product]="i"></app-product-card>
+
+                </div>
+
+             </div>
+
+            </div>
+               <!-- end gadgets section -->
+                <!-- start Laptops & Tablets -->
+                <div
+                class="tab-pane fade show  text-white  mt-5"
+                id="pills-laptopsTablets"
+                role="tabpanel"
+                aria-labelledby="pills-laptopsTablets-tab"
+              >
+              <div class="row gy-4">
+                <div class="col-md-4 col-sm-6 col-12"  *ngFor="let i of allmusic()">
+
+                  <app-product-card [product]="i"></app-product-card>
+
+                  </div>
+
+                </div>
+                </div>
+                <!-- end Laptops & Tablets-section -->
+
+            </div>
+
+
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+ </section>
+<!-- end phone and tablets -->
+
+<!-- start discount image -->
+ <div class="position-relative discount">
+  <!-- <img src="/assets/imgs/bg.jpg" class="w-100" alt=""> -->
+  <div class="position-absolute p-3 text-white h-100 d-flex flex-column justify-content-center" style="top: 1px;     left: 139px;"
+  >
+  <h1 class="text-capitalize fw-light">Save Up to 40% Off</h1>
+  <h6 class="text-capitalize fw-light">On All Apple Products</h6>
+  <button class="btn btn-primary w-50 mt-3">shop now</button>
+</div>
+ </div>
+<!-- end discount image -->
+ <!-- start carousal section -->
+  <app-carousal></app-carousal>
+ <!-- end carousal section -->
+  <!-- start release -->
+   <div class="container py-5">
+    <div class="row mt-5 releasedSec">
+      <div class="col-md-4 col-12 " *ngFor="let i of release">
+    <app-releases [data]="i"></app-releases>
+      </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-md-4 col-12" *ngFor="let item of selling">
+
+
+        <app-selling-feature [sellingFeatur]="item"></app-selling-feature>
+      </div>
+    </div>
+   </div>
+  <!-- end release -->
+
+  <!--start footer section -->
+<section class="footer">
+<div class="container py-5">
+  <div class="row gy-3">
+    <div class="col-md-4 col-12">
+      <div class="card footerCrd py-3 px-4 rounded-0">
+        <div class="row align-items-center ">
+          <div class="col-md-3 col-12">
+            <div class="usrFooter">
+
+              <img src="/assets/imgs/foot1.png" class="w-100" alt="">
+            </div>
+
+          </div>
+          <div class="col-md-9 col-12">
+            <div class="cardContent">
+              <h4 class="text-capitalize text-white fw-light">call center</h4>
+              <h3 class="fw-light"><a class="text-primary footLink">
+                (734) 555.1212</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-12">
+      <div class="card footerCrd py-3 px-4 rounded-0">
+        <div class="row align-items-center">
+          <div class="col-md-3 col-12">
+            <div class="usrFooter">
+
+              <img src="/assets/imgs/foot2.png" class="w-100" alt="">
+            </div>
+
+          </div>
+          <div class="col-md-9 col-12">
+            <div class="cardContent">
+              <h4 class="text-capitalize text-white fw-light m-0">free delivery</h4>
+             <p class="text-white m-0"><small class="para">Free delivery on the territory of USA for allamounts over $100</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-12">
+      <div class="card footerCrd py-3 px-4 rounded-0">
+        <div class="row align-items-center">
+          <div class="col-md-3 col-12">
+            <div class="usrFooter">
+
+              <img src="/assets/imgs/foot3.png" class="w-100" alt="">
+            </div>
+
+          </div>
+          <div class="col-md-9 col-12">
+            <div class="cardContent">
+              <h4 class="text-capitalize text-white fw-light">gift cards</h4>
+              <h3 class="fw-light"><a class="text-primary footLink">
+                Save up to 20%</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<app-footer-card></app-footer-card>
+</div>
+</section>
+  <!--end footer section -->
+
+

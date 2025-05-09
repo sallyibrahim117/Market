@@ -1,0 +1,18 @@
+
+<div class="row d-flex align-items-center">
+  <div class="col-3">
+    <div>
+      <img [src]="sellingFeatur.image" class="w-100" alt="">
+    </div>
+    </div>
+
+    <div class="col-9">
+      <div class="content fw-medium d-flex flex-column justify-content-center">
+
+        <a class="text-capitalize">{{sellingFeatur.desc}}p</a>
+        <p class="mt-2"><span [class.del]="sellingFeatur.oldPrice">${{sellingFeatur.price}}</span>  @if (sellingFeatur.oldPrice) {
+        <span class="text-danger ms-3">${{sellingFeatur.oldPrice}}</span>
+        }</p>
+      </div>
+    </div>
+  </div>

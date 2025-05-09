@@ -1,0 +1,17 @@
+
+.happy-custommer{
+background-color: rgb(238, 238, 238);
+height: 550px;
+.titleContent{
+  font-size: 45px;
+}
+}
+::ng-deep {
+
+  .p-carousel-indicators {
+    display: none;
+  }
+  .p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
+    display: none
+  }
+}
