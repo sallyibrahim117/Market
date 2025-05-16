@@ -258,6 +258,7 @@ export const quickLinks = [
 ];
 
 export const page1 = [
+
   {
     label: 'about us',
     link: '/about',
@@ -282,11 +283,13 @@ export const page1 = [
 export const shopPage =[{label:"",link:""}]
 // pages of navbar
 export const allPages = [
-  { label: 'home' },
+  { label: 'home' ,link:"home"},
   { label: 'pages', list: page1 },
   { label: 'shop' },
   // { label: 'blog' },
   { label: 'elements' },
+  { label: 'users' ,link:"users"},
+
 ];
 
 // pages of categories of header

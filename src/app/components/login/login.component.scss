@@ -1,0 +1,22 @@
+.login{
+  background-image: url('/assets/imgs/bgsand.jpg');
+width: 700px;
+height: 500px;
+    background-position: left;
+}
+#loginForm{
+  background-image: url('/assets/imgs/bgsand.jpg');
+  width: 400px;
+    height: 300px;
+      background-position: left;
+      border-radius: 10px;
+}
+.form-control::placeholder {
+  color: #99A1B7;
+  opacity: 1;
+font-size: 13px;
+}
+.loginBtn{
+      width: 100px;
+    height: 40px;
+}

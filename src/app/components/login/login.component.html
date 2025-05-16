@@ -1,0 +1,99 @@
+<div class="login container mt-4">
+<!-- <img src="/assets/imgs/bgsand.jpg" alt=""> -->
+ <div class="d-flex h-100 justify-content-center flex-column align-items-center">
+
+   <form
+   id="loginForm"
+   [formGroup]="myForm"
+   class=" p-4 card border-0"
+   (ngSubmit)="submit()"
+ >
+   <div class="">
+
+
+         <label for="exampleInputEmail1" class=" text-capitalize sm-formTxt text-secondary"
+           > email address</label
+         >
+
+
+         <div class="mt-1">
+         <input
+           type="email"
+           class="form-control "
+           id="exampleInputEmail1"
+           aria-describedby="emailHelp"
+           placeholder="john@usgai.com"
+           formControlName="email"
+           [class.is-invalid]="
+             formControlls['email'].invalid &&
+             formControlls['email'].touched
+           "
+         />
+         <ng-container
+           *ngIf="
+             formControlls['email'].invalid &&
+             formControlls['email'].touched &&
+             formControlls['email'].errors
+           "
+         >
+           <small class="text-danger" *ngIf="formControlls['email'].errors"
+              style="
+    font-size: 12px;">Email or Phone is required
+           </small>
+           <small
+             class="text-danger"
+             *ngIf="formControlls['email'].errors['email']"
+             >email must be contains &#64;
+           </small>
+         </ng-container>
+         </div>
+
+
+   </div>
+
+
+   <div class="mt-3">
+
+
+         <label for="password" class=" text-capitalize sm-formTxt text-secondary"
+           > password</label
+         >
+
+
+         <div class="mt-1">
+         <input
+           type="password"
+           class="form-control "
+           id="password"
+
+           placeholder="Enter your password"
+           formControlName="passwd"
+           [class.is-invalid]="
+             formControlls['passwd'].invalid &&
+             formControlls['passwd'].touched
+           "
+         />
+         <ng-container
+           *ngIf="
+             formControlls['passwd'].invalid &&
+             formControlls['passwd'].touched &&
+             formControlls['passwd'].errors
+           "
+         >
+           <small class="text-danger" *ngIf="formControlls['passwd'].errors"
+              style="
+    font-size: 12px;">enter your password
+           </small>
+
+         </ng-container>
+         </div>
+
+
+   </div>
+   <div class="mt-3 d-flex justify-content-end ">
+
+     <button class="bg-warning text-uppercase text-white rounded-pill loginBtn"  (click)="login()">login</button>
+   </div>
+   </form>
+ </div>
+</div>

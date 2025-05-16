@@ -131,6 +131,9 @@ this.productService.getAllproducts().subscribe({
 // }
 
 //   }
+
+
+
 allPhones:any[]=[{title:"iPhones" ,image:"/assets/imgs/and2.jpg",
   desc:"Apple iPhone 6 4.7-Inch Black 128GB",price: 449},
   {title:"iPhones" ,image:"/assets/imgs/and3.jpg",

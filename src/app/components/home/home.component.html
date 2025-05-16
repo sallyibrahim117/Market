@@ -104,7 +104,7 @@
 
    <div class="container">
     <ul class="nav nav-pills " id="pills-tab" role="tablist">
-      <li class="nav-item" role="presentation">
+      <!-- <li class="nav-item" role="presentation">
         <button
           class="nav-link active text-capitalize "
           id="pills-all-tab"
@@ -114,149 +114,37 @@
           role="tab"
           aria-controls="pills-all"
           aria-selected="true"
+(click)="loadProductsByCategory('all')"
         >
           All
         </button>
-      </li>
+      </li> -->
+      @for (item of category; track $index) {
       <li class="nav-item ms-2" role="presentation">
         <button
           class="nav-link "
-          id="pills-smartphone-tab"
+          id="pills-{{item}}-tab"
           data-bs-toggle="pill"
-          data-bs-target="#pills-smartphone"
+          data-bs-target=`pills-${item}`
           type="button"
           role="tab"
-          aria-controls="pills-smartphone"
+          aria-controls=`pills-${item}`
           aria-selected="false"
+          (click)="loadProductsByCategory(item)"
         >
-          Smartphone
+          {{item}}
         </button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button
-          class="nav-link  text-capitalize"
-          id="pills-android-tab"
-          data-bs-toggle="pill"
-          data-bs-target="#pills-android"
-          type="button"
-          role="tab"
-          aria-controls="pills-android"
-          aria-selected="false"
-        >
-          android
-        </button>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link  text-capitalize"
-            id="pills-iphone-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#pills-iphone"
-            type="button"
-            role="tab"
-            aria-controls="pills-iphone"
-            aria-selected="false"
-          >
-            iphone
-          </button>
-      </li>
+      </li>}
     </ul >
 
-     <hr class="mt-0 m-0">
-     <div class="tab-content mt-4" id="pills-tabContent">
-        <!-- start all section -->
-     <div
-     class="tab-pane fade show active text-white  mt-4"
-     id="pills-all"
-     role="tabpanel"
-     aria-labelledby="pills-all-tab"
-   >
-   <div class="row gy-2">
-
-     <div class="col-md-5 col-12">
-
-     <!-- <app-product-card [product]="android"></app-product-card> -->
-     </div>
-     <div class="col-md-7 col-12">
-      <div class="row gy-2">
-        <div class="col-md-6 col-12" *ngFor="let i of allPhones">
-  <app-android-phone [androidPhone]="i"></app-android-phone>
-        </div>
+    <div class="mt-4">
+      <div class="row gy-3">
+        @for (item of products; track $index) {
+            <div class="col-lg-4 col-md-6">
+                        <app-android-phone [androidPhone]="item"></app-android-phone>
+        </div>}
       </div>
-     </div>
-   </div>
-
-  </div>
-     <!-- end all section -->
-        <!-- start smart-phone section -->
-        <div
-        class="tab-pane fade show  text-white  mt-4"
-        id="pills-smartphone"
-        role="tabpanel"
-        aria-labelledby="pills-smartphone-tab"
-      >
-      <div class="row gy-2">
-
-        <div class="col-md-5 col-12">
-
-        <!-- <app-product-card [product]="android"></app-product-card> -->
-        </div>
-        <div class="col-md-7 col-12">
-         <div class="row gy-2">
-           <div class="col-md-6 col-12" *ngFor="let i of allPhones">
-     <app-android-phone [androidPhone]="i"></app-android-phone>
-           </div>
-         </div>
-        </div>
-      </div>
-
-     </div>
-        <!-- end smart-phone section -->
-         <!-- start android-section -->
-         <div
-         class="tab-pane fade show  text-white  mt-4"
-         id="pills-android"
-         role="tabpanel"
-         aria-labelledby="pills-android-tab"
-       >
-       <div class="row gy-2">
-
-         <div class="col-md-5 ">
-
-         <!-- <app-product-card [product]="android"></app-product-card> -->
-         </div>
-         <div class="col-md-4">
-<app-android-phone [androidPhone]="allPhones[0]"></app-android-phone>
-         </div>
-         </div>
-         </div>
-         <!-- end android-section -->
-          <!-- start iphone section -->
-          <div
-          class="tab-pane fade show  text-white  mt-4"
-          id="pills-iphone"
-          role="tabpanel"
-          aria-labelledby="pills-iphone-tab"
-        >
-        <div class="row gy-2">
-
-          <div class="col-md-4 col-12">
-
-
-  <app-android-phone [androidPhone]="allPhones[1]"></app-android-phone>
-  </div>
-  <div class="col-md-4 col-12">
-  <app-android-phone [androidPhone]="allPhones[2]"></app-android-phone>
-  </div>
-  <div class="col-md-4 col-12">
-  <app-android-phone [androidPhone]="allPhones[3]"></app-android-phone>
-</div>
-          </div>
-          </div>
-
-
-          <!-- end iphone section -->
-     </div>
-
+    </div>
      <!-- start music and movies -->
 <div class="py-5">
   <div class="py-3">
